@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>属性选择器</title>
+	<style type="text/css">
+		/*匹配包含id中包含test的所有div*/
+		div[id*=test]{
+			height: 30px;
+			width: 100px;
+			background: red;
+			border:solid 1px #000;
+		}
+
+		/*匹配包含dataAtt中以att开头的所有class为tt的元素*/
+		.tt[dataAtt^=att]{
+			border:solid 1px #00ff00;
+		}
+
+		/*匹配包含dataAtt中以att开头的所有class为tt的元素*/
+		.tt[dataAtt^=att]{
+			border:solid 1px #00ff00;
+		}
+
+		/*匹配包含dataAtt中以02结尾的所有class为tt的元素*/
+		.tt[dataAtt$=t02]{
+			border:solid 1px #ff0000;
+		}
+
+
+	</style>
+</head>
+<body>
+	<div id="test1"></div>
+	<div id="test2"></div>
+	<div id="test3"></div>
+	<div id="test4"></div>
+
+	<span class="tt" id="tt1" dataAtt="att">你好</span>
+	<span class="tt" id="tt2" dataAtt="att">你好</span>
+	<span class="tt" id="tt3" dataAtt="tt">你好</span>
+	<span class="tt" id="tt4" dataAtt="tt">你好</span>
+	<span class="tt" id="tt5" dataAtt="tt">你好</span>
+	<span class="tt" id="tt6" dataAtt="att02">你好</span>
+</body>
+</html>
